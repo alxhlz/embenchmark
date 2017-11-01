@@ -400,7 +400,7 @@ then
 	if [ $network_21 = 1 ]
 	then
 		result=$( wget -O /dev/null http://speed.hetzner.de/100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-		echo -e "\033[36mCloudflare CDN - \033[33m100MB Testfile \033[0m: $result"
+		echo -e "\033[36mHetzner (DE) - \033[33m100MB Testfile \033[0m: $result"
 	fi
 
 	#myVirtualserver (DE)
